@@ -503,4 +503,25 @@ void Cross(Vector3& out, Vector3& one, Vector3& two) {
 }
 #pragma endregion
 
+#pragma region Scale and angles
+void Scale(Vector2 & in, float scaleby) {
+	for (size_t i = 0; i < 2; i++)
+	{
+		in.e[i] *= scaleby;
+	}
+}
+void Scale(Vector3 & in, float scaleby) {
+	for (size_t i = 0; i < 3; i++)
+	{
+		in.e[i] *= scaleby;
+	}
+}
+void Scale(Vector4 & in, float scaleby) {
+	for (size_t i = 0; i < 4; i++)
+	{
+		in.e[i] *= scaleby;
+	}
+}
+
+
 #pragma endregion

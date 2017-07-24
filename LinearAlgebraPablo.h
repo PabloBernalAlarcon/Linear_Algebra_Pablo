@@ -504,6 +504,8 @@ void Cross(Vector3& out, Vector3& one, Vector3& two) {
 #pragma endregion
 
 #pragma region Scale and angles
+
+//Scale a vector by a certain number
 void Scale(Vector2 & in, float scaleby) {
 	for (size_t i = 0; i < 2; i++)
 	{
@@ -523,5 +525,26 @@ void Scale(Vector4 & in, float scaleby) {
 	}
 }
 
-
+//Find an angle between two vectors
+float Angle(Vector2 & one, Vector2 & two) {
+	float dot = Dot(one, two);
+	float Lone = one.Magintude();
+	float Ltwo = two.Magintude();
+	float ans = dot / (Lone*Ltwo);
+	return (acos(ans)) * 180 / 3.14;
+}
+float Angle(Vector3 & one, Vector3 & two) {
+	float dot = Dot(one, two);
+	float Lone = one.Magintude();
+	float Ltwo = two.Magintude();
+	float ans = dot / (Lone*Ltwo);
+	return (acos(ans))*180/3.14;
+}
+float Angle(Vector4 & one, Vector4 & two) {
+	float dot = Dot(one, two);
+	float Lone = one.Magintude();
+	float Ltwo = two.Magintude();
+	float ans = dot / (Lone*Ltwo);
+	return (acos(ans)) * 180 / 3.14;
+}
 #pragma endregion
